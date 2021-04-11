@@ -3,11 +3,11 @@ import 'intersection-observer';
 import $ from 'jquery';
 import 'jquery-ui'
 import 'jquery-ui/ui/effect'
-import 'bootstrap';
 import 'popper.js';
-import Swiper from 'swiper/dist/js/swiper.min';
-import noUiSlider from 'nouislider';
-
+import 'bootstrap';
+import 'jquery-mousewheel';
+import 'malihu-custom-scrollbar-plugin';
+import 'select2';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -22,83 +22,42 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    // Swiper slider
-    if ($('.swiper-container').length) {
-        let slider;
-        let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
+    // Custom scrollbar
+    $('.custom-scroll').mCustomScrollbar();
 
-        if (slide > 1) {
-            slider = new Swiper('.swiper-container', {
-                observer: true,
-                observeParents: true,
-                loop: true,
-                autoplay: true,
-                spaceBetween: 25,
-                slidesPerView: 1,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                /*scrollbar: {
-                    el: '.swiper-scrollbar',
-                },*/
-                dynamicBullets: true,
-            });
+    // Select2
+    $('.select-list').select2({
+        placeholder: 'Select Country',
+        // minimumResultsForSearch: Infinity,
+    });
+
+    $('.select-list').on('select2:open', function (event) {
+        $('.select2-results ul.select2-results__options').unbind('mousewheel');
+        $('.select2-results').mCustomScrollbar();
+    });
+
+    function readUrl(input) {
+        let preview = $('#trademark_img_preview img');
+        if (input.files[0].type.match(`image.*`)) {
+            let reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+        else {
+            preview.attr('src', preview.data('error'));
         }
     }
+    $('#trademark_input_preview').change(function () {
+        readUrl(this);
+    });
 
-    // Range slide
-    if ($('input[type="range"]')) {
-        let sliderRange = document.querySelectorAll('.slider-range');
-        let sliderHandles = document.querySelectorAll('.slider-handles');
-
-        if (sliderRange.length) {
-            sliderRange.forEach(function (elem) {
-                let input = elem.childNodes[0];
-                let startValue = input.hasAttribute('value') ? Number(input.getAttribute('value')) : 1;
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [startValue],
-                    step: 1,
-                    behavior: 'tap',
-                    connect: [true, false],
-                    range: {
-                        'min': [minValue],
-                        'max': [maxValue]
-                    }
-                });
-            });
-        }
-
-        if (sliderHandles.length) {
-            sliderHandles.forEach(function (elem) {
-                let input = elem.childNodes[0];
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [minValue, maxValue/2],
-                    step: 1,
-                    behavior: 'tap-drag',
-                    connect: true,
-                    range: {
-                        'min': minValue,
-                        'max': maxValue
-                    }
-                });
-            });
-        }
-    }
+    $('.truncate-wrap').on('click', function () {
+        $(this).toggleClass('active');
+    });
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');

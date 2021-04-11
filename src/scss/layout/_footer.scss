@@ -5,6 +5,27 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+  padding: 23px 0 20px;
+  background: $gray-100;
 }
 
-.copyright {}
+.partners {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  filter: grayscale(1);
+
+  picture {
+    flex: 0 0 50%;
+    margin: 8px 0;
+  }
+}
+
+.copyright {
+  margin: 0;
+  color: $gray-800;
+  text-align: center;
+}

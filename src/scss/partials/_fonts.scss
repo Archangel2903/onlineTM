@@ -1,2 +1,46 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family:'Open Sans';
+  src: url('#{$fonts-path}Open Sans Regular.eot');
+  src: url('#{$fonts-path}Open Sans Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Open Sans Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Open Sans Regular.woff') format('woff'),
+  url('#{$fonts-path}Open Sans Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Open Sans Regular.svg#Open Sans Regular') format('svg');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+
+@font-face {
+  font-family:'Open Sans';
+  src: url('#{$fonts-path}Open Sans SemiBold.eot');
+  src: url('#{$fonts-path}Open Sans SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Open Sans SemiBold.woff2') format('woff2'),
+  url('#{$fonts-path}Open Sans SemiBold.woff') format('woff'),
+  url('#{$fonts-path}Open Sans SemiBold.ttf') format('truetype'),
+  url('#{$fonts-path}Open Sans SemiBold.svg#Open Sans SemiBold') format('svg');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
+}
+
+@font-face {
+  font-family:'Raleway';
+  src: url('#{$fonts-path}Raleway Bold.eot');
+  src: url('#{$fonts-path}Raleway Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Raleway Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Raleway Bold.woff') format('woff'),
+  url('#{$fonts-path}Raleway Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Raleway Bold.svg#Raleway Bold') format('svg');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}

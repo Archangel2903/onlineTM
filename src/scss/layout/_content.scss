@@ -6,9 +6,308 @@
   -webkit-order: 2;
   flex-grow: 1;
   -webkit-flex-grow: 1;
+  width: 100%;
   min-width: 320px;
 }
 
-.main-slider {
+.section-header {
+  padding: 75px 0 28px;
+}
 
+.main-title {
+  margin: 0 0 36px 0;
+  font-family: $font-family-custom;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+// Search form
+.search-form {
+  width: 100%;
+
+  &__field-name {
+    display: inline-block;
+    margin: 0 20px 5px;
+    color: #ffffff;
+    font-size: 12px;
+  }
+}
+
+.ticker {
+  padding: 15px 0;
+  color: $gray-300;
+  background: $black;
+}
+
+// Countries Lists
+.section-countries {
+  padding: 60px 0;
+}
+
+.countries {
+  &:first-child {
+    .countries__head {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid $gray-300;
+    }
+  }
+
+  &__head {
+    display: none;
+    padding: 0 0 10px;
+
+    &-titles {
+      color: $gray-800;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    border-bottom: 1px solid $gray-300;
+    padding: 10px 0;
+
+    svg {
+      width: 32px;
+      height: 31px;
+      margin-right: 20px;
+    }
+    &-name {
+      color: $gray-800;
+    }
+
+    &-quantity {
+      font-weight: 600;
+    }
+  }
+}
+
+// How it work
+.section-instruction {
+  padding: 30px 0 40px;
+  background: #f4f4f4;
+}
+
+.instruction {
+  &__box {
+    display: inline-flex;
+    flex-direction: row;
+
+    &-ico {
+      flex: 0 0 50px;
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      padding: 14px 0;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      background: $main-first-color;
+      svg {
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__description {
+
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $font-family-custom;
+    font-weight: 700;
+  }
+
+  &__text {
+    color: $gray-800;
+    line-height: 21px;
+  }
+}
+
+// Contact us
+.section-feedback {
+  padding: 60px 0;
+}
+
+.contact-form {
+  &__message {
+    min-height: 75px;
+    max-height: 218px;
+    padding: 10px 20px;
+  }
+}
+
+// Trademark info
+.section-trademark {
+  padding: 50px 0 40px;
+}
+
+.trademark-preview {
+  position: relative;
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: 1px solid $gray-100;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__link {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 6px 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: $main-first-color;
+    z-index: 1;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+#trademark_input_preview {
+  display: none;
+}
+
+#trademark_img_preview {
+  position: relative;
+  display: block;
+  width: 170px;
+  height: 170px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.trademark-info {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 42px;
+    border-top: 1px solid $gray-300;
+    padding: 12px 0;
+    &:last-child {
+      border-bottom: 1px solid $gray-300;
+    }
+  }
+  &__name {
+    margin-right: 20px;
+    color: $gray-800;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__value {
+    font-weight: 600;
+    &.badge {
+      padding: 4px 10px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.truncate-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  &__arrow {
+    flex: 0 0 6px;
+    position: relative;
+    height: 6px;
+    margin-left: 20px;
+    border-bottom: 1px solid #00548e;
+    border-left: 1px solid #00548e;
+    transform: translateY(5px) rotate(-45deg);
+    cursor: pointer;
+  }
+  &.active {
+    position: absolute;
+    padding: 13px 10px 9px 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-11px) scale(1.1);
+    z-index: 1;
+
+    .trademark-info__value.text-truncate {
+      text-overflow: clip;
+      white-space: normal;
+    }
+  }
+}
+
+// Trademark form
+.trademark-form {
+  &__title {
+    font-family: $font-family-base;
+    font-size: 20px;
+    font-weight: 700;
+
+    &-sector {
+      font-family: $font-family-base;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    label {
+      font-family: $font-family-base;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  hr {
+    margin: 50px 0 36px;
+    background: $gray-300;
+  }
 }

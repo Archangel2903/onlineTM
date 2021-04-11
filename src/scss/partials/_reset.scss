@@ -6,6 +6,7 @@
 ***********************************************************/
 * {
   box-sizing: border-box;
+  outline: none;
 
   &:before, &:after {
     box-sizing: border-box;
@@ -43,6 +44,7 @@ a {
   &:link,
   &:visited {
     outline: 0;
+    text-decoration: none;
   }
 }
 
@@ -119,12 +121,11 @@ input {
 
   &[type="text"], &[type="email"], &[type="password"], &[type="number"], &[type="tel"], &[type="search"], &[type="datetime"], &[type="url"] {
     cursor: auto;
-    padding: 0 5px;
+    //padding: 0 5px;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
 
     &:focus {
-      background: none;
 
       &::-webkit-input-placeholder {
         color: transparent;
@@ -149,9 +150,9 @@ input {
     -webkit-appearance: button;
     -moz-appearance: button;
   }
-  &[type="checkbox"], &[type="radio"] {
+  /*&[type="checkbox"], &[type="radio"] {
     padding: 0;
-  }
+  }*/
   &[type="file"], &[type="color"], &[type="image"], &[type="range"] {
     border: none;
   }
@@ -181,11 +182,9 @@ button {
 }
 
 textarea {
-  padding: 0 5px;
+  //padding: 0 5px;
 
   &:focus {
-    background: none;
-
     &::-webkit-input-placeholder {
       color: transparent;
       transform: rotate3d(1, 0, 0, 90deg);
@@ -305,18 +304,18 @@ iframe {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
+  color: $light;
   background: $main-first-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
+  color: $light;
   background: $main-first-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
+  color: $light;
   background: $main-first-color;
 }

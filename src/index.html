@@ -11,100 +11,450 @@
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="/">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
+                    </picture>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                        aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-md-flex flex-row flex-wrap justify-content-end align-items-center align-content-center text-center text-md-left"
+                     id="navbarMenu">
+                    <ul class="navbar-nav mb-md-n3">
+                        <li class="nav-item my-2 my-md-0 active">
+                            <a class="nav-link" href="trademark.html">Renew Trademark</a>
+                        </li>
+                        <li class="nav-item my-2 my-md-0">
+                            <a class="nav-link" href="#instruction" data-toggle="modal" data-target="#instruction">How it works</a>
+                        </li>
+                    </ul>
+
+                    <a href="mailto:test29031993@gmail.com" class="btn btn-outline-primary mt-3 my-md-0">Contact Us</a>
+                </div>
+            </nav>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
+        <section class="section section-header">
+            <div class="section-bg">
+                <picture>
+                    <source srcset="<%= require('./img/header-bg.jpg') %>">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/header-bg.jpg') %>" class="section-bg__img" alt="" title="">
+                </picture>
+            </div>
             <div class="container">
-                <h2>Section Slider</h2>
+                <h1 class="main-title text-white text-center">Online Renewal helping you protect what`s yours</h1>
+                <div class="row">
+                    <div class="col">
+                        <form action="mailto:test29031993@gmail.com" method="post" class="search-form">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <label>
+                                            <span class="search-form__field-name">Trademark Country</span>
+                                            <select class="select-list">
+                                                <option></option>
+                                                <option value="BR">Brazil</option>
+                                                <option value="HU">Hungary</option>
+                                                <option value="HK">Hong Kong</option>
+                                                <option value="GR">Greece</option>
+                                                <option value="DK">Denmark</option>
+                                                <option value="EG">Egypt</option>
+                                                <option value="IL">Israel</option>
+                                                <option value="IE">Ireland</option>
+                                                <option value="ES">Spain</option>
+                                                <option value="IT">Italy</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="CN">China</option>
+                                                <option value="LV">Latvia</option>
+                                                <option value="UG">Uganda</option>
+                                                <option value="UA">Ukraine</option>
+                                                <option value="AE">United Arab Emirates</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <option value="US">United States</option>
+                                                <option value="UY">Uruguay</option>
+                                                <option value="UZ">Uzbekistan</option>
+                                                <option value="VU">Vanuatu</option>
+                                                <option value="VA">Vatican City State (Holy See)</option>
+                                                <option value="VE">Venezuela</option>
+                                                <option value="PL">Poland</option>
+                                                <option value="RU">Russia</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
 
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <label>
+                                            <span class="search-form__field-name">Trademark Name</span>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Trademark Name">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <label>
+                                            <span class="search-form__field-name">Registration Number</span>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Registration Number">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col text-center text-md-right">
+                                    <a href="#" class="btn btn-light" disabled>Next</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ticker">
+            <marquee>Our online system will save you time and money when dealing with your trademark renewal. In two easy steps, you provide the trademark
+                information, your contact information and credit card details. Leave the rest to us! Renewing a trademark registration does not require the filing of any
+                documents or statement proving use of the mark.
+            </marquee>
+        </div>
+
+        <section class="section section-countries">
+            <div class="container">
+                <div class="row justify-content-md-between">
+                    <div class="col-12 col-lg-4 countries">
+                        <div class="countries__head">
+                            <span class="countries__head-titles">Country</span>
+                            <span class="countries__head-titles">Trade marks</span>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                        <ul class="countries__list">
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-au"></use></svg>Australia</span>
+                                <span class="countries__item-quantity">669 702</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-fi"></use></svg>Finland</span>
+                                <span class="countries__item-quantity">73 464</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-mx"></use></svg>Mexico</span>
+                                <span class="countries__item-quantity">1 018 417</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-sg"></use></svg>Singapore</span>
+                                <span class="countries__item-quantity">365 316</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-uk"></use></svg>United Kingdom</span>
+                                <span class="countries__item-quantity">416 450</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4 countries">
+                        <div class="countries__head">
+                            <span class="countries__head-titles">Country</span>
+                            <span class="countries__head-titles">Trade marks</span>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                        <ul class="countries__list">
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-dk"></use></svg>Denmark</span>
+                                <span class="countries__item-quantity">89 509</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-id"></use></svg>Indonesia</span>
+                                <span class="countries__item-quantity">537 432</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-nz"></use></svg>New Zealand</span>
+                                <span class="countries__item-quantity">289 295</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-se"></use></svg>Sweden</span>
+                                <span class="countries__item-quantity">121 297</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4 countries">
+                        <div class="countries__head">
+                            <span class="countries__head-titles">Country</span>
+                            <span class="countries__head-titles">Trade marks</span>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                        <ul class="countries__list">
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-eu"></use></svg>European Union</span>
+                                <span class="countries__item-quantity">981 305</span>
+                            </li>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-jp"></use></svg>Japan</span>
+                                <span class="countries__item-quantity">1 753 601</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-no"></use></svg>Norway</span>
+                                <span class="countries__item-quantity">170 974</span>
+                            </li>
+
+                            <li class="countries__item">
+                                <span class="countries__item-name"><svg><use xlink:href="img/spritemap.svg#sprite-ch"></use></svg>Switzerland</span>
+                                <span class="countries__item-quantity">248 816</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-instruction">
+            <div class="container">
+                <h2 class="main-title text-center">How it Works?</h2>
+                <div class="row instruction">
+                    <div class="col-lg-4 instruction__box">
+                        <div class="instruction__box-ico">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-folder-info"></use>
+                            </svg>
+                        </div>
+                        <div class="instruction__description">
+                            <h6 class="instruction__title">1. Provide trademark info</h6>
+                            <p class="instruction__text">Provide the trademark and registration number for the mark you wish to renew. You can renew multiple trademarks if you
+                                wish!</p>
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <div class="col-lg-4 instruction__box">
+                        <div class="instruction__box-ico">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-bank"></use>
+                            </svg>
+                        </div>
+                        <div class="instruction__description">
+                            <h6 class="instruction__title">2. Provide personal contact & billing info</h6>
+                            <p class="instruction__text">We require your company / firm name and contact information for billing purposes. Enter the required credit card
+                                information and checkout!</p>
+                        </div>
+                    </div>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!--<div class="swiper-scrollbar"></div>-->
+                    <div class="col-lg-4 instruction__box">
+                        <div class="instruction__box-ico">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-trademark"></use>
+                            </svg>
+                        </div>
+                        <div class="instruction__description">
+                            <h6 class="instruction__title">3. Trademark renewed!</h6>
+                            <p class="instruction__text">You will receive the Certificate of Renewal issued by email of your renewal request.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section section-feedback">
             <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
+                <h2 class="main-title text-center">Contact Us</h2>
+                <div class="row">
+                    <div class="col">
+                        <form action="mailto:test29031993@gmail.com" method="post" class="contact-form">
+                            <div class="row">
+                                <div class="col-12 col-md-7 col-xl-7 order-md-0 order-1">
+                                    <div class="form-group mb-md-0">
+                                        <label>
+                                            <textarea class="form-control contact-form__message" rows="13" placeholder="Message"></textarea>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-5 col-xl-4 order-md-1 order-0">
+                                    <div class="form-group mb-md-5">
+                                        <label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Your Client ID or Name">
+                                        </label>
+                                    </div>
 
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
+                                    <div class="form-group mb-md-5">
+                                        <label>
+                                            <input type="email" class="form-control form-control-lg" placeholder="Email">
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group mb-md-5">
+                                        <label>
+                                            <input type="tel" class="form-control form-control-lg" placeholder="Phone">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-md-5 pt-md-3">
+                                <div class="col text-center">
+                                    <input type="submit" class="btn btn-primary" value="Contact Us">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Range slider</h2>
-
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
-
-                <br>
-
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
-            </div>
-        </div>
+        </section>
     </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center partners">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-01.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-02.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-03.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-04.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-05.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-06.png') %>" alt="" title="">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="mb-4 text-center"><a href="#privacy_policy" class="text-dark" data-toggle="modal" data-target="#privacy_policy">Terms and Conditions/Privacy
+                        policy/Cancelation policy</a></p>
+                    <p class="copyright">© 2021 Online Renewal LLC</p>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- FOOTER END -->
+</div>
+
+<div class="modal modal-instruction fade" id="instruction" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            <h2 class="modal-title mb-3 text-lg-center">How it works</h2>
+
+            <div class="modal-body custom-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-4 text-lg-center">A <b>trademark</b> is valid for ten years from the date it has been filed, and it must be renewed before its expiry in order to remain valid for another ten years.
+                                The text
+                                bellow will explain the process if you wish to renew your trademark.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12 col-lg-4">
+                            <h4>Step 1.</h4>
+
+                            <p class="text-dark">Chose a jurisdiction in which your trademark is registered. Type trademark name and/or trademark number. Click on "next".
+                                <br>
+                                <br>
+                                You will see information about your trademark on the screen.
+                                <br>
+                                <br>
+                                You will also see the total price for renewal of this trademark This payment includes our fees and all necessary governmental fees in order to do the renewal on your behalf. By making that payment you irrevocably empower us to do the renewal on your behalf. By making this payment you consent to the terms and conditions on this homepage (make sure you have read them before executing the payment).</p>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <h4>Step 2.</h4>
+                            <p class="text-dark">Once the payment has been received by us we will immediately start the renewal process. The renewal will be performed 30 days after the earliest possible renewal date. For example, if it was possible to renew a trade mark from 6 months before the expiry date, then we would renew the trade mark 5 months before the expiry date at the corresponding official registry. In general the renewal service will be performed 30 days after having received your online order.
+                                <br>
+                                <br>
+                                In some cases additional information or signatures may be required. In these cases our staff will contact you either by phone or by e-mail in order to perform your renewal. Be aware that it is your responsibility to provide us with all necessary documents and/or signatures. In case of failure, a non-refundable termination of the agreement may be applied.</p>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <h4>Step 3.</h4>
+                            <p class="text-dark">Your trademark is renewed for another ten (10) years.
+                                <br>
+                                <br>
+                                We will notify you via e-mail or by post depending on the jurisdiction that your trademark has been renewed.
+                                <br>
+                                <br>
+                                * Applications submitted for renewal after the expiry of the grace period will not be accepted. You will be informed in writing that your trademark has been canceled and removed from the Register.
+                                <br>
+                                <br>
+                                * Partial renewal of a trademark. If you wish to renew the trademark partially, meaning choosing to remove some classes, please indicate this in writing on the form by crossing out the classes you wish to remove or contact us by phone in order to get your invoice updated correspondingly with the correct amount.
+                                <br>
+                                <br>
+                                * Cancellation policy. We do not except any cancellations once an order has been placed. Please contact our customer care center for additional info.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="text-lg-center">Please Note!</h4>
+                            <p class="m-0 text-dark text-lg-center">Making a payment on this website is secure. We do not store or handle your credit card information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-policy fade" id="privacy_policy" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <h5 class="modal-title mb-3 pb-3 text-center">Terms and conditions</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            <div class="modal-body custom-scroll">
+                <p>1.1 Quisque nec lorem cursus, interdum ipsum a, vehicula purus. Nunc non lacus consectetur, placerat justo at, venenatis ex. Sed accumsan risus quis justo
+                    auctor, ut congue sem faucibus. In sollicitudin blandit nisl in tincidunt. Fusce quis molestie erat. Fusce vitae odio neque.
+                    <br>
+                    <br>
+                    Pellentesque dictum diam id lacinia tempor. Nullam eu mauris vestibulum, hendrerit nunc in, porta neque. Maecenas nec venenatis urna. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Aliquam efficitur ante magna, ac bibendum erat mollis ac. Quisque nec sem iaculis, lacinia sem eu, bibendum quam. Sed
+                    venenatis elit non eros sodales gravida. Morbi rutrum eros dui, eu euismod nulla euismod non. Fusce id elit urna.</p>
+
+                <p>2.2 Quisque nec lorem cursus, interdum ipsum a, vehicula purus. Nunc non lacus consectetur, placerat justo at, venenatis ex. Sed accumsan risus quis justo
+                    auctor, ut congue sem faucibus. In sollicitudin blandit nisl in tincidunt. Fusce quis molestie erat. Fusce vitae odio neque.
+                    <br>
+                    <br>
+                    Pellentesque dictum diam id lacinia tempor. Nullam eu mauris vestibulum, hendrerit nunc in, porta neque. Maecenas nec venenatis urna. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Aliquam efficitur ante magna, ac bibendum erat mollis ac. Quisque nec sem iaculis, lacinia sem eu, bibendum quam. Sed
+                    venenatis elit non eros sodales gravida. Morbi rutrum eros dui, eu euismod nulla euismod non. Fusce id elit urna.
+                    <br>
+                    <br>
+                    Pellentesque dictum diam id lacinia tempor. Nullam eu mauris vestibulum, hendrerit nunc in, porta neque. Maecenas nec venenatis urna. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Aliquam efficitur ante magna, ac bibendum erat mollis ac. Quisque nec sem iaculis, lacinia sem eu, bibendum quam. Sed
+                    venenatis elit non eros sodales gravida. Morbi rutrum eros dui, eu euismod nulla euismod non. Fusce id elit urna.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="icon-load">

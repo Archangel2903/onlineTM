@@ -7,5 +7,52 @@ header.header {
   position: relative;
   min-width: 320px;
   width: 100%;
+  border-bottom: 1px solid #dddddd;
   z-index: 100;
+
+  .navbar {
+    padding: 13px 0;
+
+    &-nav {
+      .nav-link {
+        padding: 0;
+        color: $gray-800;
+        font-size: 16px;
+      }
+    }
+
+    .nav-item {
+
+      &.active {
+        .nav-link {
+          display: inline-block;
+          border-bottom: 3px solid $main-first-color;
+          padding: 0 0 9px;
+          color: $black;
+        }
+      }
+    }
+  }
 }
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+
+  &__link {
+    color: $gray-800;
+    font-size: 16px;
+    &:first-child {
+      color: $black;
+    }
+    &+ a {
+      margin-left: 40px;
+    }
+  }
+}
+
