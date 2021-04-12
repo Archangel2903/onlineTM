@@ -26,15 +26,17 @@ $(function () {
     $('.custom-scroll').mCustomScrollbar();
 
     // Select2
-    $('.select-list').select2({
-        placeholder: 'Select Country',
-        // minimumResultsForSearch: Infinity,
-    });
+    if ($('.select-list').length) {
+        $('.select-list').select2({
+            placeholder: 'Select Country',
+            minimumResultsForSearch: Infinity,
+        });
 
-    $('.select-list').on('select2:open', function (event) {
-        $('.select2-results ul.select2-results__options').unbind('mousewheel');
-        $('.select2-results').mCustomScrollbar();
-    });
+        $('.select-list').on('select2:open', function (event) {
+            $('.select2-results ul.select2-results__options').unbind('mousewheel');
+            $('.select2-results').mCustomScrollbar();
+        });
+    }
 
     function readUrl(input) {
         let preview = $('#trademark_img_preview img');
@@ -51,13 +53,26 @@ $(function () {
             preview.attr('src', preview.data('error'));
         }
     }
-    $('#trademark_input_preview').change(function () {
-        readUrl(this);
-    });
 
-    $('.truncate-wrap').on('click', function () {
-        $(this).toggleClass('active');
-    });
+    if ($('#trademark_form').length) {
+        $('#trademark_submit').on('click', function (e) {
+            $('#trademark_form').slideUp(300);
+        });
+
+        $('#trademark_input_preview').change(function () {
+            readUrl(this);
+        });
+
+        $('.truncate-wrap').on('click', function () {
+            $(this).toggleClass('active');
+        });
+    }
+
+    if ($('#contact_form').length) {
+        $('#contact_form input, #contact_form textarea').on('change', function (e) {
+            $('#contact_form input[type="submit"]').attr('value', 'Send');
+        });
+    }
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');

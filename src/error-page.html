@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <title>Главная</title>
+</head>
+<body class="loaded">
+<!-- BODY -->
+<div class="main-wrapper">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="/">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
+                    </picture>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                        aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-md-flex flex-row flex-wrap justify-content-end align-items-center align-content-center text-center text-md-left"
+                     id="navbarMenu">
+                    <ul class="navbar-nav mb-md-n3">
+                        <li class="nav-item my-2 my-md-0 active">
+                            <a class="nav-link" href="trademark.html">Renew Trademark</a>
+                        </li>
+                        <li class="nav-item my-2 my-md-0">
+                            <a class="nav-link" href="#instruction" data-toggle="modal" data-target="#instruction">How it works</a>
+                        </li>
+                    </ul>
+
+                    <a href="mailto:test29031993@gmail.com" class="btn btn-outline-primary mt-3 my-md-0">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- CONTENT -->
+    <main class="content">
+        <section class="section section-service-msg">
+            <div class="container">
+                <div class="row">
+                    <div class="service-message col px-lg-5 mx-lg-5 text-center">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-error"></use>
+                        </svg>
+
+                        <h2 class="mb-4 font-weight-bold">Error!</h2>
+                        <p class="px-lg-5 mx-lg-5 mb-4 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum quam et euismod pulvinar. Aliquam velit lectus, eleifend sit amet placerat sed, commodo ac felis. Suspendisse ut nisl lacus.</p>
+                        <a href="/" class="btn btn-primary">Try Again</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- CONTENT END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center partners">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-01.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-02.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-03.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-04.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-05.png') %>" alt="" title="">
+                    </picture>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-06.png') %>" alt="" title="">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="mb-4 text-center"><a href="#privacy_policy" class="text-dark" data-toggle="modal" data-target="#privacy_policy">Terms and Conditions/Privacy
+                        policy/Cancelation policy</a></p>
+                    <p class="copyright">© 2021 Online Renewal LLC</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+</div>
+
+<div class="modal modal-instruction fade" id="instruction" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            <h2 class="modal-title mb-3 text-lg-center">How it works</h2>
+
+            <div class="modal-body custom-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-4 text-lg-center">A <b>trademark</b> is valid for ten years from the date it has been filed, and it must be renewed before its expiry in order to remain valid for another ten years.
+                                The text
+                                bellow will explain the process if you wish to renew your trademark.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12 col-lg-4">
+                            <h4>Step 1.</h4>
+
+                            <p class="text-dark">Chose a jurisdiction in which your trademark is registered. Type trademark name and/or trademark number. Click on "next".
+                                <br>
+                                <br>
+                                You will see information about your trademark on the screen.
+                                <br>
+                                <br>
+                                You will also see the total price for renewal of this trademark This payment includes our fees and all necessary governmental fees in order to do the renewal on your behalf. By making that payment you irrevocably empower us to do the renewal on your behalf. By making this payment you consent to the terms and conditions on this homepage (make sure you have read them before executing the payment).</p>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <h4>Step 2.</h4>
+                            <p class="text-dark">Once the payment has been received by us we will immediately start the renewal process. The renewal will be performed 30 days after the earliest possible renewal date. For example, if it was possible to renew a trade mark from 6 months before the expiry date, then we would renew the trade mark 5 months before the expiry date at the corresponding official registry. In general the renewal service will be performed 30 days after having received your online order.
+                                <br>
+                                <br>
+                                In some cases additional information or signatures may be required. In these cases our staff will contact you either by phone or by e-mail in order to perform your renewal. Be aware that it is your responsibility to provide us with all necessary documents and/or signatures. In case of failure, a non-refundable termination of the agreement may be applied.</p>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <h4>Step 3.</h4>
+                            <p class="text-dark">Your trademark is renewed for another ten (10) years.
+                                <br>
+                                <br>
+                                We will notify you via e-mail or by post depending on the jurisdiction that your trademark has been renewed.
+                                <br>
+                                <br>
+                                * Applications submitted for renewal after the expiry of the grace period will not be accepted. You will be informed in writing that your trademark has been canceled and removed from the Register.
+                                <br>
+                                <br>
+                                * Partial renewal of a trademark. If you wish to renew the trademark partially, meaning choosing to remove some classes, please indicate this in writing on the form by crossing out the classes you wish to remove or contact us by phone in order to get your invoice updated correspondingly with the correct amount.
+                                <br>
+                                <br>
+                                * Cancellation policy. We do not except any cancellations once an order has been placed. Please contact our customer care center for additional info.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="text-lg-center">Please Note!</h4>
+                            <p class="m-0 text-dark text-lg-center">Making a payment on this website is secure. We do not store or handle your credit card information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-policy fade" id="privacy_policy" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <h5 class="modal-title mb-3 pb-3 text-center">Terms and conditions</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            <div class="modal-body custom-scroll">
+                <p>1.1 Quisque nec lorem cursus, interdum ipsum a, vehicula purus. Nunc non lacus consectetur, placerat justo at, venenatis ex. Sed accumsan risus quis justo
+                    auctor, ut congue sem faucibus. In sollicitudin blandit nisl in tincidunt. Fusce quis molestie erat. Fusce vitae odio neque.
+                    <br>
+                    <br>
+                    Pellentesque dictum diam id lacinia tempor. Nullam eu mauris vestibulum, hendrerit nunc in, porta neque. Maecenas nec venenatis urna. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Aliquam efficitur ante magna, ac bibendum erat mollis ac. Quisque nec sem iaculis, lacinia sem eu, bibendum quam. Sed
+                    venenatis elit non eros sodales gravida. Morbi rutrum eros dui, eu euismod nulla euismod non. Fusce id elit urna.</p>
+
+                <p>2.2 Quisque nec lorem cursus, interdum ipsum a, vehicula purus. Nunc non lacus consectetur, placerat justo at, venenatis ex. Sed accumsan risus quis justo
+                    auctor, ut congue sem faucibus. In sollicitudin blandit nisl in tincidunt. Fusce quis molestie erat. Fusce vitae odio neque.
+                    <br>
+                    <br>
+                    Pellentesque dictum diam id lacinia tempor. Nullam eu mauris vestibulum, hendrerit nunc in, porta neque. Maecenas nec venenatis urna. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Aliquam efficitur ante magna, ac bibendum erat mollis ac. Quisque nec sem iaculis, lacinia sem eu, bibendum quam. Sed
+                    venenatis elit non eros sodales gravida. Morbi rutrum eros dui, eu euismod nulla euismod non. Fusce id elit urna.
+                    <br>
+                    <br>
+                    Pellentesque dictum diam id lacinia tempor. Nullam eu mauris vestibulum, hendrerit nunc in, porta neque. Maecenas nec venenatis urna. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Aliquam efficitur ante magna, ac bibendum erat mollis ac. Quisque nec sem iaculis, lacinia sem eu, bibendum quam. Sed
+                    venenatis elit non eros sodales gravida. Morbi rutrum eros dui, eu euismod nulla euismod non. Fusce id elit urna.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="icon-load">
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+</div>
+<!-- BODY END   -->
+</body>
+</html>
