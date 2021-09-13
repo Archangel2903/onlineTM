@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <title>PDF</title>
+</head>
+<body class="loaded">
+<!-- BODY -->
+
+<div style="max-width: 760px; margin: 15px auto; font-family: 'Times New Roman', serif;">
+    <div>
+        <picture>
+            <img src="<%= require('./img/pdf-logo.png') %>" alt="logo" title="logo" width="300px">
+        </picture>
+
+        <b style="float: right;"><i>Note. This is not an invoice. You are not required to pay.</i></b>
+    </div>
+
+    <br>
+
+    <div style="padding: 0 15px;">
+        <div style="float: left;">
+            <p style="margin: 0; font-size: 16px;"><i>Company Name</i></p>
+            <p style="margin: 0; font-size: 16px;"><i>Company address</i></p>
+        </div>
+
+        <div style="padding-left: 25px; float: right;">
+            <picture>
+                <img src="<%= require('./img/qr.png') %>" alt="qr" title="qr" width="100px" height="100px">
+            </picture>
+            <p style="margin: 1rem 0 0;"><span>133456765 SF</span></p>
+        </div>
+
+        <hr style="height: 0; margin: 0; border: none; clear: both;">
+
+        <br>
+        <br>
+
+        <p style="font-size: 18px;"><b>Dear trademark holder,<br>Your trademark registered in <span>New Zealand</span> is about to expire.</b></p>
+        <p style="font-size: 18px;">Our records show that your trademark is about to expire. The renewal <span>process started: 06/11/2021</span> . Please
+            sign and return this document if you wish us to renew the below stated trademark. Please enter the correct address details below, if there have been any changes that
+            you wish to be entered in the official records.</p>
+
+        <br>
+
+        <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+            <tbody>
+            <tr align="left" style="border: 1px solid black; border-collapse: collapse;">
+                <th style="padding: 5px 10px; border: 1px solid black; border-collapse: collapse; font-weight: 400;">Trademark description:</th>
+                <th style="padding: 5px 10px; border: 1px solid black; border-collapse: collapse; font-weight: 400;">Address:</th>
+                <th style="padding: 5px 10px; border: 1px solid black; border-collapse: collapse; font-weight: 400;">Address changes:</th>
+            </tr>
+            <tr style="border: 1px solid black; border-collapse: collapse;">
+                <td style="min-width: 456px; max-width: 60%; padding: 10px; border: 1px solid black; border-collapse: collapse;" width="456">
+                    <table style="width: 100%; border: 0;">
+                        <tr>
+                            <td>
+                                <p style="word-break: break-all;">XXXXXX</p>
+                                <p style="word-break: break-all;">Valid until: 2021-11-06</p>
+                                <p style="word-break: break-all;">Registeration nr: 0024395142</p>
+                                <p style="word-break: break-all;">Class: 35, 39, 41</p>
+                            </td>
+                            <td>
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" style="display: block; max-width: 200px; margin: 0 0 0 10px;" alt="table-img" title="table-img">
+                                </picture>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="max-width: 152px; padding: 10px; border: 1px solid black; border-collapse: collapse;" width="152">
+                    <p style="word-break: break-all">XXXXXX</p>
+                </td>
+                <td style="max-width: 152px; padding: 10px; border: 1px solid black; border-collapse: collapse;" width="152">
+                    <p style="word-break: break-all">XXXXXX</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <p style="font-size: 18px;">By signing this document, you agree to comply with the terms and conditions stated on <a href="http://www.goldmanrosenstain.com/terms">www.goldmanrosenstain.com/terms</a>. You also authorize Goldman Rosenstain and Partners LLC to renew the above-stated trademark on your behalf. You will receive a confirmation from us once the trademark renewal is completed. Please note that your exclusive trademark rights may be cancelled, if not renewed in time.</p>
+
+        <p style="font-size: 18px;">The trademark stated in this document will be renewed for another 10-year period. The total fee for the renewal is <span>PRICE</span> including all applicable filing fees. As soon as the signed document has been emailed to us an electronic payment link will be issued and send to you. Once the payment has been received and processed by us, the renewal process will start.</p>
+
+        <br>
+
+        <p style="font-size: 18px;">Yours faithfully,<br><br>
+            <span>Goldman Rosenstain and Partners</span></p>
+
+        <ul>
+            <li>
+                <p>Please mark if you wish to renew your trademark:</p>
+                <form action="" method="" style="margin-bottom: 15px;">
+                    <label style="margin-right: 40px;">
+                        <input type="checkbox" style="margin-right: 5px;">
+                        <span>Renew</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" style="margin-right: 5px;">
+                        <span>Let the trademark lapse/Use another agent</span>
+                    </label>
+                </form>
+            </li>
+
+            <li>Scan and send signed form to <b>renewal@goldmanrosenstain.com</b>.</li>
+        </ul>
+
+        <br><br><br>
+
+        <p style="margin: 0; white-space: pre-line;">
+            <span style="width: 40%; float: left">X________________________________________</span><span style="width: 40%; float: right">________________________________________</span>
+        </p>
+
+        <p style="margin: 0; padding-left: 12px; font-size: 12px; white-space: pre-line;"> <span style="width: 40%; float: left">Name, date, and signature</span><span style="width: 40%; float: right">Email (required)</span></p>
+        <p style="margin: 0; clear:both;"></p>
+    </div>
+
+    <br><br><br>
+
+    <p style="padding: 0 15px; float:left; color: #bbbbbb; font-size: 18px;">Goldman Rosenstain and Partners LLC</p>
+
+    <div style="float: right;">
+        <p style="color: #999999; font-size: 10px">info@goldmanrosenstain.com</p>
+        <p style="color: #999999; font-size: 10px">www.goldmanrosenstain.com</p>
+    </div>
+
+    <hr style="height: 0; margin: 0; border: none; clear: both;">
+</div>
+<!-- BODY END   -->
+</body>
+</html>
